@@ -1,0 +1,9 @@
+{
+    "mongo": {
+        "url": "mongodb://localhost/argentina-dashboard"
+    },
+    "twitter": {
+        "consumer_key": "sjQUcFCYKd9i4ybEnm0MUQ",
+        "access_token": "14113950-Efaw23avIdba9QQj6Zv3U4rUXolYmHaQzdfzjbRW1"
+    }
+}
