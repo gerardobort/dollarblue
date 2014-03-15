@@ -29,8 +29,19 @@
                     data.addRows(_(resOfficial[0].data).map(function (o) { return [new Date(o.created), o.price, null]; }));
                     data.addRows(_(resParallel[0].data).map(function (o) { return [new Date(o.created), null, o.price]; }));
 
-                    var options = { title: 'Official vs. Parallel Dollar Price', width: 700, height: 500 };
-                    var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
+                    var options = {
+                        title: 'Official vs. Parallel Dollar Price',
+                        width: 800,
+                        height: 500,
+                        crosshair: {
+                            trigger: 'both',
+                            orientation: 'vertical',
+                            color: '#999',
+                            opacity: 0.2,
+                            focused: { color: '#999', opacity: 0.4 },
+                        }
+                    };
+                    var chart = new google.visualization.LineChart(document.getElementById('chart_1'));
                     chart.draw(data, options);
                 });
             }
@@ -39,6 +50,6 @@
 
     <body>
         <!--Div that will hold the pie chart-->
-        <div id="chart_div_1" style="width:400; height:300"></div>
+        <div id="chart_1"></div>
     </body>
 </html>
