@@ -20,8 +20,6 @@ exports.get = function (req, res) {
             data = _(data).sortBy(function (o) { return -o.created; });
             res.send({ data: data });
         });
-    /*
-    */
     }).on('error', function(e) {
         res.send({ error: true });
     });
